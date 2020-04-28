@@ -10,8 +10,8 @@ create table Client (
    AdresseClient        varchar(50)          null,
    TeleClient           int                  null,
    constraint PK_CLIENT primary key nonclustered (IdClient)
-)
-;
+);
+
 /*affichage table*/
 select * from Client
 /*insert*/
@@ -42,8 +42,8 @@ create table Commande (
    AdresseClient        varchar(50)          null,
    TeleClient           int                  null,
    constraint PK_COMMANDE primary key nonclustered (IdCommande)
-)
-;
+);
+
 /*affichage table*/
 select * from Commande
 /*insert*/
@@ -67,8 +67,7 @@ create table Fourniseur (
    AdresseFourniseur    varchar(50)          null,
    TeleFourniseur       int                  null,
    constraint PK_FOURNISEUR primary key nonclustered (IdFourniseur)
-)
-;
+);
 
 /*affichage table*/
 select * from Fourniseur
@@ -93,8 +92,7 @@ create table Pharmacie (
    AdressePharmacie     varchar(50)          null,
    TelePharmacie        int                  null,
    constraint PK_PHARMACIE primary key nonclustered (IdPharmacie)
-)
-;
+);
 
 /*affichage table*/
 select * from Pharmacie
@@ -118,8 +116,7 @@ create table Produit (
    NomProduit           varchar(50)          null,
    PrixProduit          float                null,
    constraint PK_PRODUIT primary key nonclustered (IdProduit)
-)
-;
+);
 
 /*affichage table*/
 select * from Produit
