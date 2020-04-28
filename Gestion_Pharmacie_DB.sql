@@ -11,7 +11,7 @@ create table Client (
    TeleClient           int                  null,
    constraint PK_CLIENT primary key nonclustered (IdClient)
 )
-go
+;
 /*affichage table*/
 select * from Client
 /*insert*/
@@ -43,7 +43,7 @@ create table Commande (
    TeleClient           int                  null,
    constraint PK_COMMANDE primary key nonclustered (IdCommande)
 )
-go
+;
 /*affichage table*/
 select * from Commande
 /*insert*/
@@ -68,7 +68,7 @@ create table Fourniseur (
    TeleFourniseur       int                  null,
    constraint PK_FOURNISEUR primary key nonclustered (IdFourniseur)
 )
-go
+;
 
 /*affichage table*/
 select * from Fourniseur
@@ -94,7 +94,7 @@ create table Pharmacie (
    TelePharmacie        int                  null,
    constraint PK_PHARMACIE primary key nonclustered (IdPharmacie)
 )
-go
+;
 
 /*affichage table*/
 select * from Pharmacie
@@ -119,7 +119,7 @@ create table Produit (
    PrixProduit          float                null,
    constraint PK_PRODUIT primary key nonclustered (IdProduit)
 )
-go
+;
 
 /*affichage table*/
 select * from Produit
@@ -144,21 +144,21 @@ where NomProduit='Produit2';
 /*logim Admin with password*/
 create login admin
 with PassWord='admin';
-go
+
 /*user*/
 create user admin for login admin;
-go
+
 
 grant all to admin;
-go
+
 
 /*logim utilisateur with password*/
 create login utilisateur
 with PassWord='utilisateur';
-go
+
 /*user*/
 create user utilisateur for login utilisateur;
-go
+
 
 grant select,insert to utilisateur;
-go
+
