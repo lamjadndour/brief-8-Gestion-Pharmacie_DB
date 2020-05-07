@@ -139,24 +139,16 @@ where NomProduit='Produit2';
 /* Login and PassWord                                             */
 /*==============================================================*/
 
-/*logim Admin with password*/
-create login admin
-with PassWord='admin';
-
-/*user*/
-create user admin for login admin;
 
 
-grant all to admin;
+/* Creation des utilisateurs */
+  
+CREATE USER 'Admin'@'localhost' IDENTIFIED BY 'Admin123';
+GRANT ALL PRIVILEGES ON * . * TO 'Admin'@'localhost';
+FLUSH PRIVILEGES;  
 
 
-/*logim utilisateur with password*/
-create login utilisateur
-with PassWord='utilisateur';
 
-/*user*/
-create user utilisateur for login utilisateur;
-
-
-grant select,insert to utilisateur;
+CREATE USER 'user'@'localhost' IDENTIFIED BY '123456';
+GRANT CREATE, SELECT ON * . * TO 'user'@'localhost';
 
